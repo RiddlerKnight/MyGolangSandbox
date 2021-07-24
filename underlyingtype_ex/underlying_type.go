@@ -10,9 +10,21 @@ type Bar foo
 type baz []Bar
 type qux baz
 
+type Jodge struct {
+	id   int64
+	name string
+}
+
 func main() {
+
+	// As String
 	var justbar Bar = "My String"
 	fmt.Println(justbar)
+	//fmt.Print("%T", justbar)
+
+	thejodge := Jodge{id: 50, name: "Mock"}
+	fmt.Println(thejodge)
+	fmt.Printf("%T \n", thejodge)
 
 	var abaz baz = []Bar{"H1"}
 
