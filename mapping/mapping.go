@@ -28,4 +28,19 @@ func main() {
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
+
+	fmt.Println("==================")
+	// Delete Key
+	delete(m, "James")
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
+
+	fmt.Println("==================")
+
+	// Delete Key is not exist
+	delete(m, "James")
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
 }
