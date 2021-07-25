@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	FooFunc(5, 7, 9, 11)
@@ -12,4 +14,12 @@ func FooFunc(justInt ...int) {
 		fmt.Println(justInt[i])
 		fmt.Println("========")
 	}
+
+	sum := 0
+	for i, v := range justInt {
+		sum += v
+		fmt.Println("Now v is " + fmt.Sprint(v) + " and i is " + fmt.Sprint(i))
+	}
+
+	fmt.Println("Total sum = ", sum)
 }
