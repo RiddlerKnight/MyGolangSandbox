@@ -17,4 +17,15 @@ func main() {
 	v, ok := m["Conan"]
 	fmt.Println(v)
 	fmt.Println(ok)
+
+	fmt.Println("==================")
+	m["Conan"] = 30
+	if v, ok := m["Conan"]; ok {
+		fmt.Println(v)
+	}
+
+	fmt.Println("==================")
+	for k, v := range m {
+		fmt.Println(k, v)
+	}
 }
