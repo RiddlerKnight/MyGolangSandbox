@@ -15,6 +15,8 @@ func FooFunc(justInt ...int) {
 		fmt.Println("========")
 	}
 
+	What(justInt...)
+
 	sum := 0
 	for i, v := range justInt {
 		sum += v
@@ -22,4 +24,8 @@ func FooFunc(justInt ...int) {
 	}
 
 	fmt.Println("Total sum = ", sum)
+}
+
+func What(justAnotherInt ...int) {
+
 }

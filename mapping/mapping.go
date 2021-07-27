@@ -43,4 +43,10 @@ func main() {
 	for k, v := range m {
 		fmt.Println(k, v)
 	}
+
+	m["Bob"] = 80
+	if v, ok := m["Bob"]; ok {
+		fmt.Println("Bob,", v, "is now being deleted")
+		delete(m, "Bob")
+	}
 }
