@@ -1,14 +1,16 @@
 package repositories
 
 import (
+	diinterfaces "GodSpeed/Simple/di/di_interfaces"
 	"fmt"
 )
 
 type simpleRepository struct {
 }
 
-func NewSimpleRepository() simpleRepository {
-	return simpleRepository{}
+func NewSimpleRepository() (diinterfaces.ISimpleRepository, error) {
+	simpleRepo := simpleRepository{}
+	return &simpleRepo, nil
 }
 
 func (repo simpleRepository) Find(entity interface{}) {

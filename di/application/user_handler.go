@@ -2,9 +2,12 @@ package application
 
 import (
 	diinterfaces "GodSpeed/Simple/di/di_interfaces"
-	"GodSpeed/Simple/di/dto"
 )
 
-func InsertUser(repo diinterfaces.IBaseRepository, user *dto.User) {
-	repo.Find(user)
+type UserHandler struct {
+	Repo diinterfaces.IBaseRepository `name: "SimpleRepoV1"`
+}
+
+func NewUserHandlerV1(repo diinterfaces.IBaseRepository) UserHandler {
+	return UserHandler{Repo: repo}
 }
